@@ -17,7 +17,7 @@ export default function Areas() {
   const setDraft = useAppStore((s) => s.setDraft);
   const [view, setView] = useState<BodyView>('back');
   const { height } = useViewport();
-  const mapHeight = Math.max(240, Math.min(470, height - 420));
+  const mapHeight = Math.max(240, Math.min(460, height - 440));
 
   const toggle = (area: AreaId) =>
     setDraft({ areas: selected.includes(area) ? selected.filter((a) => a !== area) : [...selected, area] });
@@ -29,7 +29,7 @@ export default function Areas() {
         Where would you like to move better?
       </T>
       <T variant="body" color={colors.muted} style={styles.sub}>
-        Tap all that apply.
+        Choose every area that feels stiff or tight. You can change this later.
       </T>
       <View style={styles.toggle}>
         <ViewToggle view={view} onChange={setView} />
@@ -37,9 +37,11 @@ export default function Areas() {
       <View style={styles.stage}>
         <BodyMap view={view} selected={selected} onToggle={toggle} height={mapHeight} />
       </View>
-      <T variant="smallStrong" center color={selected.length ? colors.greenText : colors.muted} style={styles.label}>
-        {selectionLabel(selected)}
-      </T>
+      <View style={styles.labelBox}>
+        <T variant="smallStrong" center numberOfLines={2} color={selected.length ? colors.greenText : colors.muted} style={styles.label}>
+          {selectionLabel(selected)}
+        </T>
+      </View>
       <PrimaryButton label="Continue" disabled={selected.length === 0} style={styles.cta} onPress={() => router.push('/onboarding/goal')} />
     </Screen>
   );
@@ -50,6 +52,7 @@ const styles = StyleSheet.create({
   sub: { marginTop: 8 },
   toggle: { marginTop: 18 },
   stage: { flex: 1, alignItems: 'center', justifyContent: 'center' },
-  label: { fontSize: 15, minHeight: 22 },
+  labelBox: { height: 44, justifyContent: 'center', paddingHorizontal: 12 },
+  label: { fontSize: 14, lineHeight: 20 },
   cta: { marginTop: 16 },
 });

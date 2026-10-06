@@ -20,7 +20,7 @@ export default function EditAreas() {
   const [selected, setSelected] = useState<AreaId[]>(plan?.areas ?? []);
   const [sheet, setSheet] = useState<{ area: AreaId; adding: boolean } | null>(null);
   const { height } = useViewport();
-  const mapHeight = Math.max(240, Math.min(470, height - 370));
+  const mapHeight = Math.max(240, Math.min(460, height - 390));
   if (!plan) return null;
 
   const changed = sortAreas(selected).join() !== sortAreas(plan.areas).join();
@@ -50,9 +50,11 @@ export default function EditAreas() {
       <View style={styles.stage}>
         <BodyMap view={view} selected={selected} onToggle={toggle} height={mapHeight} />
       </View>
-      <T variant="smallStrong" center color={selected.length ? colors.greenText : colors.muted} style={styles.label}>
-        {selectionLabel(selected)}
-      </T>
+      <View style={styles.labelBox}>
+        <T variant="smallStrong" center numberOfLines={2} color={selected.length ? colors.greenText : colors.muted} style={styles.label}>
+          {selectionLabel(selected)}
+        </T>
+      </View>
       {isPremium ? (
         <PrimaryButton
           label="Save"
@@ -85,6 +87,7 @@ const styles = StyleSheet.create({
   header: { flexDirection: 'row', alignItems: 'center', gap: 8 },
   toggle: { marginTop: 18 },
   stage: { flex: 1, alignItems: 'center', justifyContent: 'center' },
-  label: { fontSize: 15, minHeight: 22 },
+  labelBox: { height: 44, justifyContent: 'center', paddingHorizontal: 12 },
+  label: { fontSize: 14, lineHeight: 20 },
   cta: { marginTop: 16 },
 });
