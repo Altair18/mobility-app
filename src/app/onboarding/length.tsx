@@ -31,6 +31,9 @@ export default function Length() {
       <T variant="title" style={styles.title}>
         How long per session?
       </T>
+      <T variant="body" color={colors.muted} style={styles.sub}>
+        Ten minutes a day adds up quickly.
+      </T>
       <View style={styles.stage}>
         <View style={styles.dial}>
           <View style={styles.face} />
@@ -65,6 +68,7 @@ export default function Length() {
 }
 
 const styles = StyleSheet.create({
+  sub: { marginTop: 8 },
   title: { marginTop: 20 },
   stage: { flex: 1, alignItems: 'center', justifyContent: 'center' },
   dial: { width: 240, height: 240 },

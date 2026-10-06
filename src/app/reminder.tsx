@@ -90,7 +90,7 @@ export default function ReminderScreen() {
         {editing ? 'Reminders' : 'Want a reminder?'}
       </T>
       <T variant="body" color={colors.muted} center style={{ marginTop: 8 }}>
-        We&apos;ll nudge you on your plan days.
+        A gentle nudge on your plan days, at a time that suits you.
       </T>
       <View style={[styles.grid, compact && { marginTop: 18 }]}>
         {SLOTS.map((s) => {

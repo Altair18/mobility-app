@@ -7,7 +7,7 @@ import { BodyFigure } from '@/components/BodyFigure';
 import { Icon } from '@/components/Icon';
 import { T } from '@/components/T';
 import { Screen } from '@/components/ui';
-import { colors, NATIVE_DRIVER } from '@/constants/theme';
+import { colors, fonts, NATIVE_DRIVER } from '@/constants/theme';
 import { areasLabel, sortAreas } from '@/data/areas';
 import { GOAL_LABEL, LEVEL_NAME } from '@/data/content';
 import { useAppStore } from '@/store/useAppStore';
@@ -103,5 +103,5 @@ const styles = StyleSheet.create({
   layer: { position: 'absolute', left: 0, top: 0 },
   lines: { marginTop: 18, marginBottom: 40, alignItems: 'center', gap: 10 },
   line: { flexDirection: 'row', alignItems: 'center', gap: 8 },
-  lineText: { color: '#3E372D', fontFamily: 'Figtree_500Medium' },
+  lineText: { color: '#3E372D', fontFamily: fonts.medium },
 });

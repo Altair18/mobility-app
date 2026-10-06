@@ -32,7 +32,7 @@ export default function Days() {
         How many days a week?
       </T>
       <T variant="body" color={colors.muted} style={styles.sub}>
-        This becomes your weekly target.
+        Three or four days is a great start. You can change it any time.
       </T>
       <View style={styles.stage}>
         <T style={styles.numeral}>{String(days)}</T>

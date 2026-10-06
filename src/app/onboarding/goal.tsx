@@ -20,6 +20,9 @@ export default function GoalAndExperience() {
       <OnboardingHeader step={2} />
       <ScrollView style={styles.scroll} contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
         <T variant="title">What&apos;s your main goal?</T>
+        <T variant="body" color={colors.muted} style={styles.sub}>
+          We&apos;ll shape your routine around it.
+        </T>
         <View style={styles.pills}>
           {GOALS.map((g) => (
             <OptionPill key={g.id} label={g.label} selected={goal === g.id} onPress={() => setDraft({ goal: g.id })} />
@@ -27,7 +30,7 @@ export default function GoalAndExperience() {
         </View>
 
         <T variant="h2" style={styles.h2}>
-          Your experience
+          How much have you stretched before?
         </T>
         <View style={styles.levels}>
           {LEVELS.map((l) => {
@@ -69,6 +72,7 @@ export default function GoalAndExperience() {
 }
 
 const styles = StyleSheet.create({
+  sub: { marginTop: 8 },
   scroll: { flex: 1 },
   content: { paddingTop: 20, paddingBottom: 12 },
   pills: { marginTop: 20, flexDirection: 'row', flexWrap: 'wrap', gap: 10 },

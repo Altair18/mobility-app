@@ -38,11 +38,14 @@ export const colors = {
 export const MAX_FONT_SCALE = 1.3;
 
 export const fonts = {
-  display: 'BricolageGrotesque_700Bold',
-  regular: 'Figtree_400Regular',
-  medium: 'Figtree_500Medium',
-  semibold: 'Figtree_600SemiBold',
-  bold: 'Figtree_700Bold',
+  /** Headlines and big numbers. */
+  display: 'PlusJakartaSans_700Bold',
+  displayMedium: 'PlusJakartaSans_600SemiBold',
+  /** Everything else. */
+  regular: 'Inter_400Regular',
+  medium: 'Inter_500Medium',
+  semibold: 'Inter_600SemiBold',
+  bold: 'Inter_700Bold',
 } as const;
 
 export const shadows = {

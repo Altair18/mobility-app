@@ -23,16 +23,16 @@ export function T({ variant = 'body', color, center, style, ...rest }: Props) {
 }
 
 const styles = StyleSheet.create({
-  hero: { fontFamily: fonts.display, fontSize: 46, lineHeight: 50, letterSpacing: -1.2, color: colors.ink },
-  title: { fontFamily: fonts.display, fontSize: 30, lineHeight: 34, letterSpacing: -0.4, color: colors.ink },
-  h2: { fontFamily: fonts.display, fontSize: 22, lineHeight: 27, letterSpacing: -0.2, color: colors.ink },
-  stat: { fontFamily: fonts.display, fontSize: 28, lineHeight: 32, color: colors.ink },
-  body: { fontFamily: fonts.regular, fontSize: 16, lineHeight: 23, color: colors.ink },
-  bodyStrong: { fontFamily: fonts.semibold, fontSize: 16, lineHeight: 22, color: colors.ink },
-  small: { fontFamily: fonts.regular, fontSize: 14, lineHeight: 19, color: colors.muted },
-  smallStrong: { fontFamily: fonts.semibold, fontSize: 14, lineHeight: 19, color: colors.ink },
-  caption: { fontFamily: fonts.regular, fontSize: 13, lineHeight: 17, color: colors.muted },
-  kicker: { fontFamily: fonts.bold, fontSize: 12, lineHeight: 16, letterSpacing: 1.2, color: colors.greenText, textTransform: 'uppercase' },
-  button: { fontFamily: fonts.semibold, fontSize: 17, lineHeight: 22, color: colors.ink },
+  hero: { fontFamily: fonts.display, fontSize: 40, lineHeight: 46, letterSpacing: -1.2, color: colors.ink },
+  title: { fontFamily: fonts.display, fontSize: 28, lineHeight: 34, letterSpacing: -0.7, color: colors.ink },
+  h2: { fontFamily: fonts.display, fontSize: 21, lineHeight: 26, letterSpacing: -0.4, color: colors.ink },
+  stat: { fontFamily: fonts.display, fontSize: 28, lineHeight: 32, letterSpacing: -0.6, color: colors.ink },
+  body: { fontFamily: fonts.regular, fontSize: 16, lineHeight: 24, letterSpacing: -0.1, color: colors.ink },
+  bodyStrong: { fontFamily: fonts.semibold, fontSize: 16, lineHeight: 22, letterSpacing: -0.1, color: colors.ink },
+  small: { fontFamily: fonts.regular, fontSize: 14, lineHeight: 20, color: colors.muted },
+  smallStrong: { fontFamily: fonts.semibold, fontSize: 14, lineHeight: 20, color: colors.ink },
+  caption: { fontFamily: fonts.regular, fontSize: 13, lineHeight: 18, color: colors.muted },
+  kicker: { fontFamily: fonts.semibold, fontSize: 12, lineHeight: 16, letterSpacing: 1.1, color: colors.greenText, textTransform: 'uppercase' },
+  button: { fontFamily: fonts.semibold, fontSize: 16, lineHeight: 22, letterSpacing: -0.1, color: colors.ink },
   center: { textAlign: 'center' },
 });
