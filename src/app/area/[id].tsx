@@ -53,7 +53,7 @@ export default function AreaScreen() {
               onPress={() => (locked ? router.push('/premium') : router.push({ pathname: '/exercise/[id]', params: { id: e.id } }))}
               accessibilityLabel={locked ? `${e.name}, Premium` : e.name}
             >
-              <PoseBubble pose={e.pose} size={44} color={REGION_COLORS[e.area]} dot={false} style={locked ? styles.dim : undefined} />
+              <PoseBubble move={e.id} pose={e.pose} size={44} color={REGION_COLORS[e.area]} dot={false} style={locked ? styles.dim : undefined} />
               <View style={styles.flex}>
                 <T variant="bodyStrong" color={locked ? colors.muted : colors.ink}>
                   {e.name}

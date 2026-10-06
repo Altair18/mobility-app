@@ -134,7 +134,7 @@ export default function SessionPlayer() {
 
       <View style={[styles.stage, compact && styles.stageCompact]}>
         <Ring size={ringSize} stroke={6} progress={left / total} color={ready ? 'rgba(47,122,86,0.35)' : colors.green}>
-          <PoseBubble pose={move.pose} size={ringSize - 44} color={REGION_COLORS[move.area]} shadow breathe={playing && !ready} />
+          <PoseBubble move={move.id} pose={move.pose} size={ringSize - 44} color={REGION_COLORS[move.area]} shadow breathe={playing && !ready} />
         </Ring>
       </View>
 
@@ -199,7 +199,7 @@ export default function SessionPlayer() {
       <View style={[styles.upNext, compact && styles.upNextCompact]}>
         {next ? (
           <>
-            <PoseBubble pose={next.pose} size={38} color={REGION_COLORS[next.area]} dot={false} />
+            <PoseBubble move={next.id} pose={next.pose} size={38} color={REGION_COLORS[next.area]} dot={false} />
             <T variant="small" style={styles.flex}>
               Up next
             </T>

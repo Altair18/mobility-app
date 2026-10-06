@@ -19,7 +19,7 @@ export default function ExerciseScreen() {
     <Screen scroll>
       <IconButton icon="back" label="Back" onPress={() => router.back()} />
       <View style={styles.stage}>
-        <PoseBubble pose={exercise.pose} size={220} color={color} shadow breathe />
+        <PoseBubble move={exercise.id} pose={exercise.pose} size={220} color={color} shadow breathe />
       </View>
       <T variant="kicker" style={styles.kicker}>
         {AREA_NAMES[exercise.area]}

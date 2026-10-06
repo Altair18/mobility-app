@@ -27,6 +27,8 @@ export const colors = {
   sandTop: '#DDCDB0',
   sandBottom: '#C4B08D',
   figure: '#E3D6C0',
+  /** Neutral background behind the exercise figure in bubbles. */
+  bubble: '#F1E8D8',
   flame: '#E8772A',
   flameText: '#A44E12',
   sheet: '#FFFCF6',
